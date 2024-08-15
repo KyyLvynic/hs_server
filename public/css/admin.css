@@ -182,3 +182,12 @@ header nav ul li a {
 header nav ul li a:hover {
     text-decoration: underline;
 }
+
+
+button.demote {
+    background-color: #f59e0b; /* Orange */
+    color: #ffffff;
+}
+button.demote:hover {
+    background-color: #d97706; /* Orange plus foncé */
+}
