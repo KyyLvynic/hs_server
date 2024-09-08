@@ -3,6 +3,7 @@ const router = express.Router();
 const ensureAdmin = require('../middleware/ensureAdmin');
 const roleController = require('./controllers/roleController');
 const userController = require('./controllers/userController');
+const adminController = require('./controllers/adminController');
 
 
 //////////////////////////////
@@ -34,6 +35,13 @@ router.post('/admin/gestion-des-roles/promote/:id', ensureAdmin, roleController.
 
 // Dégrader un administrateur en utilisateur
 router.post('/admin/gestion-des-roles/demote/:id', ensureAdmin, roleController.demoteToUser);
+
+//////////////////////////////
+///////  ROUTES DES STATS   /////
+//////////////////////////////
+
+// Afficher la page des statistiques
+router.get('/admin/statistiques', ensureAdmin, adminController.getStatistiques);
 
 
 module.exports = router;

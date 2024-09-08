@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    
+    <div class="container">
+        <h2>Statistiques</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-value"><%= stats.nbUsers %></span>
+                <span class="stat-label">Nombre total d'utilisateurs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value"><%= stats.nbAdminUsers %></span>
+                <span class="stat-label">Nombre d'administrateurs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value"><%= stats.nbNonAdminUsers %></span>
+                <span class="stat-label">Nombre de joueur classiques</span>
+            </div>
+            
+            <!-- Ajoute d'autres statistiques si nécessaire -->
+        </div>
+    </div>
+
+    
+</body>
+</html>
